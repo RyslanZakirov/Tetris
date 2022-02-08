@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
     canvas.width = width_block * 10 + 200;
     canvas.height = height_block * 20;
 
-    let rotate_audio = new Audio();
-    rotate_audio.src = "tetris_rotate.mp3";
+    // let rotate_audio = new Audio();
+    // rotate_audio.src = "tetris_rotate.mp3";
 
-    let collapse_audio = new Audio();
-    collapse_audio.src = "tetris_collapse.mp3";
+    // let collapse_audio = new Audio();
+    // collapse_audio.src = "tetris_collapse.mp3";
 
-    let audio_delete_string = new Audio();
-    audio_delete_string.src = "tetris_delete_string.mp3";
+    // let audio_delete_string = new Audio();
+    // audio_delete_string.src = "tetris_delete_string.mp3";
 
     let game_over = false;
     let score = 0;
@@ -45,10 +45,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
             motion.click_space = true;
             motion.flag = false;
 
-            rotate_audio.pause();
-            rotate_audio.currentTime = 0.0;
+            // rotate_audio.pause();
+            // rotate_audio.currentTime = 0.0;
 
-            rotate_audio.play();
+            // rotate_audio.play();
 
         }
 
@@ -254,7 +254,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                         this.state.STOP = true;
                         this.state.MOVE = false;
 
-                        collapse_audio.play();
+                        // collapse_audio.play();
 
                         this.add_on_field_new_blocks();
                         
@@ -265,7 +265,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                 this.state.STOP = true;
                                 this.state.MOVE = false;
 
-                                collapse_audio.play();
+                                // collapse_audio.play();
 
                                 //если ниже фигуры нет места и выше только потолок, то прерываем игровой цикл - игра окончена
                                 if(this.info[0].y <= 0){
@@ -564,7 +564,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                     field[0][j] = {empty: true, color: ""};
                 }
 
-                audio_delete_string.play();
+                // audio_delete_string.play();
             }
 
         }
@@ -712,15 +712,5 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
     game_loop();
 
-
-    // exemple_game_loop(()=>{
-
-    //     console.log("Game loop is working!")
-        
-    //     requestAnimationFrame(exemple_game_loop)
-
-    // })
-
-    // exemple_game_loop()
 
 });
